@@ -1,5 +1,8 @@
 from sys import exit as SYSEXIT
 
+# системные
+def sysExit(self=None): SYSEXIT()   # self для привязки к нажатию кнопок
+
 # глобальные
 def readFile(file:str):
     with open(file,'r',encoding='utf-8') as f: return [line.strip() for line in f]
