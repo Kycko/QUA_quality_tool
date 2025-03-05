@@ -13,7 +13,8 @@ def write_toFile(list:list,file:str,justAdd=False):
 
     with open(file,mode,encoding='utf-8') as f:
         for line in list: f.write(f"{line}\n")
-def get_initSettings(): return {'main':{'darkTheme':checkWinTheme()}}
+def get_initSettings(): return {'main':{'darkTheme':checkWinTheme(),
+                                        'zoom'     :0}}
 
 # GUI
 def checkWinTheme(): 

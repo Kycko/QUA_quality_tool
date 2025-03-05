@@ -26,8 +26,11 @@ class userCfg():
     def toStorage(self,list:list):
         self.storage = {}
         for line in list:
-            param,value = line.split(' ',1)
-            if value in ('True','False'): value = value == 'True'   # переводим в логическое true/false
+            param,  value = line.split(' ',1)
+            try   : value = int(value)
+            except:
+                if value in ('True','False'): value = value == 'True'   # перевод в логич. true/false
+
             self.set(param,value,False)
     def parseStorage(self):
         final = []

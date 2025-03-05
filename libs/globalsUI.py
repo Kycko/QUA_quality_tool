@@ -3,13 +3,16 @@ from sys import exit as SYSEXIT
 class globUI(): # импортируется в G.UI (в глобальные переменные)
     def __init__(self):
         # базовые переменные приложения
-        self.app = {'version'  :'v.002',
-                    'name'     :'QUA quality tool',
-                    'shortName':'QUAqt',
-                    'size'     :(400,400)}
+        self.app = {'version'  :  'v.004',
+                    'name'     :  'QUA quality tool',
+                    'shortName':  'QUAqt',
+                    'sizes'    :({'lbl':'100%','size':(270,270)},
+                                 {'lbl':'125%','size':(320,320)},
+                                 {'lbl':'150%','size':(370,370)},
+                                 {'lbl':'175%','size':(430,430)})}
         self.app   ['title'] = self.app['name']+' '+self.app['version'] # название главного окна
 
-        # стили оформления (темы, шрифты)
+        # стили оформления (темы, шрифты и т. п.)
         self.themes = ('flatly',  'superhero')      # светлая/тёмная
         self.fonts  = {'iconBig':('Calibri',17)}    # только для label'ов (для кнопок всё сложнее)
 
